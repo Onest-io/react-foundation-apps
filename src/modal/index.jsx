@@ -1,8 +1,9 @@
 var React = require('react');
 var Animation = require('../utils/animation');
 var foundationApi = require('../utils/foundation-api');
+var createReactClass = require("create-react-class");
 
-var Modal = React.createClass({
+var Modal = createReactClass({
   getInitialState: function () {
     return { open: false };
   },

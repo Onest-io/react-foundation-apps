@@ -1,7 +1,8 @@
 var React = require('react');
 var classnames = require('classnames');
+var createReactClass = require("create-react-class");
 
-var Tab = React.createClass({
+var Tab = createReactClass({
 
   select: function () {
     var options = {

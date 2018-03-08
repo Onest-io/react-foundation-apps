@@ -2,8 +2,9 @@ var React = require('react');
 var foundationApi = require('../utils/foundation-api');
 var Notification = require('./notification');
 var Animation = require('../utils/animation');
+var createReactClass = require("create-react-class");
 
-var NotificationSet = React.createClass({
+var NotificationSet = createReactClass({
   getInitialState: function () {
     return {notifications: []};
   },
@@ -50,7 +51,7 @@ var NotificationSet = React.createClass({
     }.bind(this));
     return (
         <div>{notifications}</div>
-    )  
+    )
   }
 });
 

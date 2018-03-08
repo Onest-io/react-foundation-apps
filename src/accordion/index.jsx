@@ -1,12 +1,12 @@
 var React = require('react');
+var createReactClass = require("create-react-class");
 
-
-var Accordion = React.createClass({
+var Accordion = createReactClass({
   getInitialState: function () {
     return { sections: [] };
   },
   getDefaultProps: function () {
-    return { 
+    return {
       autoOpen: true,
       multiOpen: false,
       collapsible: false

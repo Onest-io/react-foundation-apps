@@ -1,7 +1,8 @@
 var React = require('react');
 var classnames = require('classnames');
+var createReactClass = require("create-react-class");
 
-var AccordionItem = React.createClass({
+var AccordionItem = createReactClass({
   render: function () {
     var itemClasses = {
       'accordion-item': true,

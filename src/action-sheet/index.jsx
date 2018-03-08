@@ -1,7 +1,8 @@
 var React = require('react');
 var foundationApi = require('../utils/foundation-api');
+var createReactClass = require("create-react-class");
 
-var ActionSheet = React.createClass({
+var ActionSheet = createReactClass({
   getInitialState: function () {
     return {active: false};
   },

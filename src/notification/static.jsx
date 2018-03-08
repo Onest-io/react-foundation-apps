@@ -3,8 +3,9 @@ var classnames = require('classnames');
 var foundationApi = require('../utils/foundation-api');
 var Animation = require('../utils/animation');
 var Notification = require('./notification');
+var createReactClass = require("create-react-class");
 
-var NotificationStatic = React.createClass({
+var NotificationStatic = createReactClass({
   getInitialState: function () {
     return { open: false };
   },
@@ -15,7 +16,7 @@ var NotificationStatic = React.createClass({
       } else if (msg === 'close') {
         this.setState({open: false});
       }
-    }.bind(this)); 
+    }.bind(this));
   },
   componentWillUnmount: function () {
     foundationApi.unsubscribe(this.props.id);

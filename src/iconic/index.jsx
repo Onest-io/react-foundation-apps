@@ -1,10 +1,10 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
-var ExecutionEnvironment = require('react/lib/ExecutionEnvironment');
+var ExecutionEnvironment = require('exenv');
 var IconicJs = ExecutionEnvironment.canUseDOM && require('../vendor/iconic.min');
+var createReactClass = require("create-react-class");
 
-
-var Iconic = React.createClass({
+var Iconic = createReactClass({
   inject: function () {
     var ico = IconicJs();
     ico.inject(ReactDOM.findDOMNode(this));

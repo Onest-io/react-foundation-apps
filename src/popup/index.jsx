@@ -1,11 +1,12 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 var classnames = require('classnames');
-var ExecutionEnvironment = require('react/lib/ExecutionEnvironment');
+var ExecutionEnvironment = require('exenv');
 var foundationApi = require('../utils/foundation-api');
 var Tether = ExecutionEnvironment.canUseDOM && require('tether/tether');
+var createReactClass = require("create-react-class");
 
-var Popup = React.createClass({
+var Popup = createReactClass({
   getInitialState: function () {
     return {
       active: false,

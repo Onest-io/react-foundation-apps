@@ -1,5 +1,6 @@
 var React = require('react');
 var ResponsiveMixin = require('react-responsive-mixin');
+var createReactClass = require("create-react-class");
 
 var namedQueries = {
   // small: '(min-width: 0) and  (max-width: 640px)',
@@ -16,7 +17,7 @@ var namedQueries = {
   //   'only screen and (min-resolution: 2dppx)'
 };
 
-var Interchange = React.createClass({
+var Interchange = createReactClass({
   mixins: [ResponsiveMixin],
   getInitialState: function () {
     return {matchedMedia: 'large'};
@@ -28,13 +29,13 @@ var Interchange = React.createClass({
     //   }.bind(this));
     // }
     this.media({minWidth: 0, maxWidth: 640}, function () {
-      this.setState({matchedMedia: 'small'});  
+      this.setState({matchedMedia: 'small'});
     }.bind(this));
     this.media({minWidth: 641, maxWidth: 1200}, function () {
-      this.setState({matchedMedia: 'medium'});  
+      this.setState({matchedMedia: 'medium'});
     }.bind(this));
     this.media({minWidth: 1200, maxWidth: 1440}, function () {
-      this.setState({matchedMedia: 'large'});  
+      this.setState({matchedMedia: 'large'});
     }.bind(this));
   },
   render: function () {

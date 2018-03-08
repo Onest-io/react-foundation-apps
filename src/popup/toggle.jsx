@@ -1,8 +1,8 @@
 var React = require('react');
 var foundationApi = require('../utils/foundation-api');
+var createReactClass = require("create-react-class");
 
-
-var PopupToggle = React.createClass({
+var PopupToggle = createReactClass({
   clickHandler: function (id, e) {
     e.preventDefault();
     foundationApi.publish(this.props.popupToggle, ['toggle', id]);

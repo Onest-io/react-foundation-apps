@@ -1,7 +1,7 @@
 var React = require('react');
+var createReactClass = require("create-react-class");
 
-
-var Tabs = React.createClass({
+var Tabs = createReactClass({
   getInitialState: function () {
     return {
       selectedTab: 0

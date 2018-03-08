@@ -1,6 +1,7 @@
 var React = require('react');
+var createReactClass = require("create-react-class");
 
-var Notification = React.createClass({
+var Notification = createReactClass({
   getDefaultProps: function () {
     return {
       position: 'top-right',

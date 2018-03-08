@@ -1,13 +1,14 @@
 // some parts of code from react/lib/ReactCSSTransitionGroupChild.js
 var React = require('react');
 var ReactDOM = require('react-dom');
-var ReactTransitionEvents = require('react/lib/ReactTransitionEvents');
+var ReactTransitionEvents = require('./ReactTransitionEvents');
 var CSSCore = require('./csscore');
+var createReactClass = require("create-react-class");
 
 var classnames = require('classnames');
 var TICK = 17;
 
-var Animation = React.createClass({
+var Animation = createReactClass({
   getInitialState: function () {
     return {
     };
@@ -42,7 +43,7 @@ var Animation = React.createClass({
     var node = ReactDOM.findDOMNode(this);
     var initClass = 'ng-' + animationType;
     var activeClass = initClass + '-active';
-  
+
 
     this.reset(node);
     CSSCore.addClass(node, animationClass);
@@ -55,7 +56,7 @@ var Animation = React.createClass({
     //activate
     node.style.transitionDuration = '';
     CSSCore.addClass(node, activeClass);
-    
+
     ReactTransitionEvents.addEndEventListener(node, this.finishAnimation);
   },
   componentDidUpdate: function (prevProps) {

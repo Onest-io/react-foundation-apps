@@ -1,7 +1,8 @@
 var React = require('react');
 var classnames = require('classnames');
+var createReactClass = require("create-react-class");
 
-var ActionSheetContent = React.createClass({
+var ActionSheetContent = createReactClass({
   getDefaultProps: function () {
     return {position: 'bottom'};
   },

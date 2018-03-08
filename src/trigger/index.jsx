@@ -2,8 +2,9 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 var foundationApi = require('../utils/foundation-api');
 var PopupToggle = require('../popup/toggle');
+var createReactClass = require("create-react-class");
 
-var Trigger = React.createClass({
+var Trigger = createReactClass({
   getDefaultProps: function () {
     return {
       open: null,

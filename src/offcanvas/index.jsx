@@ -2,8 +2,9 @@ var React = require('react');
 var classnames = require('classnames');
 // var LayerMixin = require('react-layer-mixin');
 var foundationApi = require('../utils/foundation-api');
+var createReactClass = require("create-react-class");
 
-var Offcanvas = React.createClass({
+var Offcanvas = createReactClass({
   // mixins: [LayerMixin],
   getInitialState: function () {
     return {open: false};

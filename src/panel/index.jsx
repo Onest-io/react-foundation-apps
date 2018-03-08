@@ -2,8 +2,9 @@ var React = require('react');
 var classnames = require('classnames');
 var Animation = require('../utils/animation');
 var foundationApi = require('../utils/foundation-api');
+var createReactClass = require("create-react-class");
 
-var Panel = React.createClass({
+var Panel = createReactClass({
   getInitialState: function () {
     return {open: false};
   },
@@ -31,7 +32,7 @@ var Panel = React.createClass({
     var classes = 'panel panel-' + this.props.position;
     if (this.props.className) {
       classes += ' ' + this.props.className;
-    } 
+    }
     if(this.props.position === 'left') {
       animationIn  = this.props.animationIn || 'slideInRight';
       animationOut = this.props.animationOut || 'slideOutLeft';
