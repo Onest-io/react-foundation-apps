@@ -69,11 +69,11 @@
   },
   "dependencies": {
     "classnames": "^2.2.1",
+    "create-react-class": "^15.6.3",
     "exenv": "^1.2.2",
     "foundation-apps": "git+https://github.com/zurb/foundation-apps.git",
     "object-assign": ">=4.0.*",
     "pubsub-js": "^1.5.x",
-    "react-create-class": "^1.0.0",
     "tether": "^0.6.5"
   },
   "browserify": {
